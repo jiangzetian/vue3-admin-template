@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4ba043-42c9-4e0f-9b69-d15b99b29060" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/reactTemplatesPlugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mock/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mock/login.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
@@ -20,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vite-env.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
@@ -72,9 +70,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.jscs" value="" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\projectStudy\vue3-admin\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="D:\projectStudy\vue3-admin\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="E:\project\vueProject\vue3-admin-template\node_modules\typescript\lib" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -91,6 +90,8 @@
       <workItem from="1629442021947" duration="1458000" />
       <workItem from="1629443526787" duration="713000" />
       <workItem from="1629444874883" duration="2128000" />
+      <workItem from="1631028012185" duration="605000" />
+      <workItem from="1631028634887" duration="233000" />
     </task>
     <servers />
   </component>
@@ -105,17 +106,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="723" y="349" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1629442429168" />
-    <state x="615" y="296" width="689" height="670" key="EditFileWatcherDialog" timestamp="1629442524149">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="615" y="299" width="689" height="670" key="EditFileWatcherDialog" timestamp="1631028538273">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="615" y="299" key="EditFileWatcherDialog/-1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1631028538273" />
     <state x="615" y="296" width="689" height="670" key="EditFileWatcherDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1629442524149" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1629442412643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1629442412643" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1629444902787">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1631028539105">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="461" y="164" key="SettingsEditor/-1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1631028539105" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1629444902787" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1629442854245">
       <screen x="0" y="0" width="1920" height="1040" />

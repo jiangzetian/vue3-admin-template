@@ -1,5 +1,5 @@
 import base from '@/request/base';
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 // 设置超时时间
 const instance = axios.create({
@@ -8,16 +8,20 @@ const instance = axios.create({
 // 设置公共路径 和 Content-Type
 instance.defaults.baseURL = base.baseurl;
 
+interface AxiosConfig extends AxiosRequestConfig {
+    loading: boolean;
+}
+
 const Fetch = ({
     url = '',
     method = 'GET',
     data = {},
     params = {},
-    loading = true,
     headers = {
         'Content-Type': 'application/json',
     },
-}: any) => {
+    loading = true,
+}: AxiosConfig) => {
     if (loading) {
         // loading
     }
@@ -25,10 +29,10 @@ const Fetch = ({
     return new Promise((resolve, reject) => {
         instance({
             url,
+            method,
             data,
             params,
             headers,
-            method,
         })
             .then((res) => {
                 resolve(res.data.data);

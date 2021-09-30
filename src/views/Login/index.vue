@@ -27,7 +27,7 @@
 <script lang="ts">
 import { defineComponent, reactive, ref, toRaw } from 'vue';
 import { useRouter } from 'vue-router';
-import axios from 'axios';
+import LoginAPI from '@/request/api/loginAPI';
 
 interface formState {
     username: string;
@@ -61,13 +61,17 @@ export default defineComponent({
 
         const onSubmit = () => {
             loginFormRef.value.validate().then(() => {
-                axios({
-                    url: '/mock/api/login',
-                    method: 'POST',
-                    data: toRaw(loginForm),
-                }).then((res) => {
+                LoginAPI.setLogin(toRaw(loginForm)).then((res) => {
+                    console.log(res);
                     router.push({ path: '/' });
                 });
+                // axios({
+                //     url: '/mock/api/login',
+                //     method: 'POST',
+                //     data: toRaw(loginForm),
+                // }).then((res) => {
+                //     router.push({ path: '/' });
+                // });
             });
         };
         return {

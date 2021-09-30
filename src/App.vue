@@ -1,13 +1,16 @@
 <template>
-    <router-view />
+    <layout v-if="$route.meta.layout" />
+    <router-view v-else />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
+import layout from '@/layout/index.vue';
 export default defineComponent({
     name: 'App',
-    components: {},
+    components: {
+        layout,
+    },
 });
 </script>
 

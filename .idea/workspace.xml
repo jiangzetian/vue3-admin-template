@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4ba043-42c9-4e0f-9b69-d15b99b29060" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/Home/moduls/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/request/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/http.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="Vue Single File Component" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -97,7 +99,7 @@
       <workItem from="1631944216066" duration="3145000" />
       <workItem from="1632272893939" duration="117000" />
       <workItem from="1632965060710" duration="2172000" />
-      <workItem from="1632982850850" duration="630000" />
+      <workItem from="1632982850850" duration="5850000" />
     </task>
     <servers />
   </component>
@@ -138,10 +140,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="328" key="jetbrains.nodejs.interpreters-dialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1631868457913" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1632966223756">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1632987021392">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1632966223756" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1632987021392" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1628842991071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

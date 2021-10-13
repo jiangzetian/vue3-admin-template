@@ -1,5 +1,6 @@
-import base from '@/request/base';
+import { message } from 'ant-design-vue';
 import axios, { AxiosRequestConfig } from 'axios';
+import base from '@/request/base';
 
 // 设置超时时间
 const instance = axios.create({
@@ -38,6 +39,7 @@ const Fetch = ({
                 resolve(res.data.data);
             })
             .catch((err) => {
+                message.error('请求失败');
                 reject(err);
             });
     });

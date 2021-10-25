@@ -10,7 +10,7 @@ const instance = axios.create({
 instance.defaults.baseURL = base.baseurl;
 
 interface AxiosConfig extends AxiosRequestConfig {
-    loading: boolean;
+    loading?: boolean;
 }
 
 const Fetch = ({

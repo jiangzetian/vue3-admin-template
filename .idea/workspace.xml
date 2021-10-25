@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4ba043-42c9-4e0f-9b69-d15b99b29060" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/Home/moduls/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/request/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/http.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +98,11 @@
       <workItem from="1632272893939" duration="117000" />
       <workItem from="1632965060710" duration="2172000" />
       <workItem from="1632982850850" duration="5850000" />
+      <workItem from="1634110991745" duration="204000" />
+      <workItem from="1634804795312" duration="1299000" />
+      <workItem from="1634867653567" duration="966000" />
+      <workItem from="1635125303569" duration="350000" />
+      <workItem from="1635125669745" duration="3748000" />
     </task>
     <servers />
   </component>
@@ -140,10 +143,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="328" key="jetbrains.nodejs.interpreters-dialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1631868457913" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1632987021392">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1635141824014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1632987021392" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635141824014" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1628842991071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

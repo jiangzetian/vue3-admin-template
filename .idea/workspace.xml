@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4ba043-42c9-4e0f-9b69-d15b99b29060" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/store/moduls/loading.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/moduls/index.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +19,22 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev_5" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/views/Login/index.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/store/index.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/request/base.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="JsFlowSettings">
@@ -59,7 +70,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\projectStudy\vue3-admin\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\projectStudy\vue3-admin\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -105,6 +116,9 @@
       <workItem from="1635125303569" duration="350000" />
       <workItem from="1635125669745" duration="3748000" />
       <workItem from="1635734452561" duration="316000" />
+      <workItem from="1635823297086" duration="161000" />
+      <workItem from="1635823473638" duration="756000" />
+      <workItem from="1635831759625" duration="1305000" />
     </task>
     <servers />
   </component>
@@ -115,15 +129,23 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#ESLint" timestamp="1635831780438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#ESLint/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635831780438" />
+    <state x="552" y="178" key="#Notifications" timestamp="1635823311112">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635823311112" />
     <state x="723" y="349" key="#com.intellij.tools.ToolEditorDialog" timestamp="1629442429168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="723" y="349" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1629442429168" />
-    <state x="615" y="296" width="689" height="670" key="EditFileWatcherDialog" timestamp="1635734473184">
+    <state x="615" y="296" width="689" height="670" key="EditFileWatcherDialog" timestamp="1635823408944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="615" y="299" key="EditFileWatcherDialog/-1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1631028538273" />
-    <state x="615" y="296" width="689" height="670" key="EditFileWatcherDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635734473184" />
+    <state x="615" y="296" width="689" height="670" key="EditFileWatcherDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635823408944" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1632273010947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -136,19 +158,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="230" key="RollbackChangesDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1631944166987" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1635734474534">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1635831742042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/-1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1631028539105" />
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635734474534" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635831742042" />
     <state x="677" y="328" key="jetbrains.nodejs.interpreters-dialog" timestamp="1631868457913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="328" key="jetbrains.nodejs.interpreters-dialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1631868457913" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1635141824014">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1635823320431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635141824014" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1635823320431" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1628842991071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

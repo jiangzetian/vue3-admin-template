@@ -23,5 +23,14 @@ module.exports = {
                 ignore: ['^@/'], // @ 是设置的路径别名
             },
         ],
+        'no-param-reassign': [
+            'error',
+            {
+                props: true,
+                ignorePropertyModificationsFor: [
+                    'state', // for vuex state
+                ],
+            },
+        ],
     },
 };

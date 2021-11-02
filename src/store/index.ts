@@ -1,15 +1,11 @@
 import { createStore } from 'vuex';
+import loadings from '@/store/moduls/loading';
 
 export default createStore({
-    state: {
-        test: '123',
-    },
-    mutations: {
-        getStateTest(state) {
-            state.test = '456';
-            return state.test;
-        },
-    },
+    state: {},
+    mutations: {},
     actions: {},
-    modules: {},
+    modules: {
+        loadings,
+    },
 });

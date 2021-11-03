@@ -16,7 +16,7 @@
             </a-layout-header>
 
             <a-layout-content :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
-                <a-spin :spinning="false" delay="300" size="large">
+                <a-spin :spinning="$store.state.loading.loadingState" :delay="300" size="large">
                     <router-view />
                 </a-spin>
             </a-layout-content>

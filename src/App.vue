@@ -1,6 +1,6 @@
 <template>
     <layout v-if="$route.meta.layout" />
-    <a-spin :spinning="false" v-else>
+    <a-spin :spinning="$store.state.loading.loadingState" :delay="300" size="large" v-else>
         <router-view />
     </a-spin>
 </template>

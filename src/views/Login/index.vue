@@ -65,13 +65,6 @@ export default defineComponent({
                     console.log(res);
                     router.push({ path: '/' });
                 });
-                // axios({
-                //     url: '/mock/api/login',
-                //     method: 'POST',
-                //     data: toRaw(loginForm),
-                // }).then((res) => {
-                //     router.push({ path: '/' });
-                // });
             });
         };
         return {

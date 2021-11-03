@@ -1,5 +1,6 @@
 import { message } from 'ant-design-vue';
 import axios, { AxiosRequestConfig } from 'axios';
+import store from '@/store';
 import base from '@/request/base';
 
 // 设置超时时间
@@ -25,6 +26,7 @@ const Fetch = ({
 }: AxiosConfig) => {
     if (loading) {
         // loading
+        store.commit('loading/showLoading');
     }
 
     return new Promise((resolve, reject) => {
@@ -36,9 +38,11 @@ const Fetch = ({
             headers,
         })
             .then((res) => {
+                store.commit('loading/hideLoading');
                 resolve(res.data.data);
             })
             .catch((err) => {
+                store.commit('loading/hideLoading');
                 message.error('请求失败');
                 reject(err);
             });

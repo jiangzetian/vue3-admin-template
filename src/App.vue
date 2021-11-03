@@ -1,6 +1,8 @@
 <template>
     <layout v-if="$route.meta.layout" />
-    <router-view v-else />
+    <a-spin :spinning="false" v-else>
+        <router-view />
+    </a-spin>
 </template>
 
 <script lang="ts">
@@ -16,5 +18,13 @@ export default defineComponent({
 #app {
     width: 100%;
     height: 100%;
+}
+.ant-spin-nested-loading,
+.ant-spin-container {
+    width: 100%;
+    height: 100%;
+}
+.ant-spin {
+    max-height: unset !important;
 }
 </style>

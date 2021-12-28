@@ -1,5 +1,8 @@
 // @/router/index.ts
 import { createRouter, createWebHashHistory } from 'vue-router';
+import store from '@/store';
+
+// console.log(store.state.user);
 
 const routes = [
     {
@@ -25,6 +28,14 @@ const routes = [
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
+});
+
+router.beforeEach((to, from, next) => {
+    if (to.name !== 'Login' && !localStorage.getItem('token')) {
+        next({ name: 'Login' });
+    } else {
+        next();
+    }
 });
 
 export default router;

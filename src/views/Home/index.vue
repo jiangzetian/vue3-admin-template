@@ -5,11 +5,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, toRaw } from 'vue';
+import { useStore } from 'vuex';
 
 export default defineComponent({
     name: 'home',
     setup() {
+        const store = useStore();
+        // console.log(store.state.user.token);
+        // console.log(toRaw(store.state.user.userInfo));
         return {};
     },
 });

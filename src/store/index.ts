@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
 import loading from '@/store/modules/loading';
+import user from '@/store/modules/user';
 
 export default createStore({
     state: {},
@@ -8,5 +9,6 @@ export default createStore({
 
     modules: {
         loading,
+        user,
     },
 });

@@ -27,6 +27,8 @@
 <script lang="ts">
 import { defineComponent, reactive, ref, toRaw } from 'vue';
 import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+
 import LoginAPI from '@/request/api/loginAPI';
 
 interface formState {
@@ -37,6 +39,7 @@ export default defineComponent({
     name: 'login',
     setup() {
         const router = useRouter();
+        const store = useStore();
         const loginFormRef = ref();
         const loginForm: formState = reactive({
             username: '',
@@ -63,6 +66,8 @@ export default defineComponent({
             loginFormRef.value.validate().then(() => {
                 LoginAPI.setLogin(toRaw(loginForm)).then((res) => {
                     console.log(res);
+                    store.commit('user/setToken', res.token);
+                    store.commit('user/setUserInfo', res.userInfo);
                     router.push({ path: '/' });
                 });
             });

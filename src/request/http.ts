@@ -29,6 +29,12 @@ const Fetch = ({
         store.commit('loading/showLoading');
     }
 
+    if (localStorage.getItem('token')) {
+        Object.assign(headers, {
+            token: localStorage.getItem('token'),
+        });
+    }
+
     return new Promise((resolve, reject) => {
         instance({
             url,

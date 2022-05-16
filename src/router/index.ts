@@ -1,8 +1,5 @@
 // @/router/index.ts
 import { createRouter, createWebHashHistory } from 'vue-router';
-import store from '@/store';
-
-// console.log(store.state.user);
 
 const routes = [
     {

@@ -36,6 +36,11 @@ interface loginFormConfig {
     password: string;
 }
 
+interface loginResConfig {
+    token: string;
+    userInfo: any;
+}
+
 const router = useRouter();
 const store = useStore();
 const loginFormRef = ref();
@@ -61,13 +66,14 @@ const loginRules = {
 };
 
 const onSubmit = () => {
-    loginFormRef.value.validate().then(() => {
-        LoginAPI.setLogin(toRaw(loginForm)).then((res) => {
+    loginFormRef.value.validate().then(async () => {
+        let res = (await LoginAPI.setLogin(toRaw(loginForm))) as loginResConfig;
+        if (res) {
             console.log(res);
             store.commit('user/setToken', res.token);
             store.commit('user/setUserInfo', res.userInfo);
             router.push({ path: '/' });
-        });
+        }
     });
 };
 </script>

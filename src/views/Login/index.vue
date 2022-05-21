@@ -1,6 +1,6 @@
 <template>
     <a-row class="layout" type="flex" justify="center" align="middle">
-        <a-card class="login_card" bodyStyle="height:100%;padding:unset;" hoverable>
+        <a-card class="login_card" :bodyStyle="{ height: '100%', padding: 'unset' }" hoverable>
             <div class="card_body">
                 <div class="login_img">
                     <img src="https://via.placeholder.com/320x180/fff.png?text=Tian-Admin" />
@@ -24,62 +24,52 @@
     </a-row>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive, ref, toRaw } from 'vue';
+<script lang="ts" setup>
+import { reactive, ref, toRaw } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 
 import LoginAPI from '@/request/api/loginAPI';
 
-interface formState {
+interface loginFormConfig {
     username: string;
     password: string;
 }
-export default defineComponent({
-    name: 'login',
-    setup() {
-        const router = useRouter();
-        const store = useStore();
-        const loginFormRef = ref();
-        const loginForm: formState = reactive({
-            username: '',
-            password: '',
-        });
-        const loginRules = {
-            username: [
-                {
-                    required: true,
-                    message: '请输入用户名',
-                    trigger: 'blur',
-                },
-            ],
-            password: [
-                {
-                    required: true,
-                    message: '请输入密码',
-                    trigger: 'blur',
-                },
-            ],
-        };
 
-        const onSubmit = () => {
-            loginFormRef.value.validate().then(() => {
-                LoginAPI.setLogin(toRaw(loginForm)).then((res) => {
-                    console.log(res);
-                    store.commit('user/setToken', res.token);
-                    store.commit('user/setUserInfo', res.userInfo);
-                    router.push({ path: '/' });
-                });
-            });
-        };
-        return {
-            loginFormRef,
-            loginForm,
-            loginRules,
-            onSubmit,
-        };
-    },
+const router = useRouter();
+const store = useStore();
+const loginFormRef = ref();
+const loginForm: loginFormConfig = reactive({
+    username: '',
+    password: '',
 });
+const loginRules = {
+    username: [
+        {
+            required: true,
+            message: '请输入用户名',
+            trigger: 'blur',
+        },
+    ],
+    password: [
+        {
+            required: true,
+            message: '请输入密码',
+            trigger: 'blur',
+        },
+    ],
+};
+
+const onSubmit = () => {
+    loginFormRef.value.validate().then(() => {
+        LoginAPI.setLogin(toRaw(loginForm)).then((res) => {
+            console.log(res);
+            store.commit('user/setToken', res.token);
+            store.commit('user/setUserInfo', res.userInfo);
+            router.push({ path: '/' });
+        });
+    });
+};
 </script>
 
 <style lang="less" scoped>

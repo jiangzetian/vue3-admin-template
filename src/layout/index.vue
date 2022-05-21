@@ -15,31 +15,25 @@
                 <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
             </a-layout-header>
 
-            <a-layout-content :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
-                <a-spin :spinning="$store.state.loading.loadingState" :delay="300" size="large">
+            <a-layout-content style="margin: 24px 16px; padding: 24px; background: #fff; min-height: 280px">
+                <a-spin :spinning="store.state.loading.loadingState" :delay="300" size="large">
                     <router-view />
                 </a-spin>
             </a-layout-content>
         </a-layout>
     </a-layout>
 </template>
-<script lang="ts">
+
+<script lang="ts" setup>
 import { DashboardOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue';
-import { defineComponent, ref } from 'vue';
-export default defineComponent({
-    components: {
-        DashboardOutlined,
-        MenuUnfoldOutlined,
-        MenuFoldOutlined,
-    },
-    setup() {
-        return {
-            selectedKeys: ref<string[]>(['/']),
-            collapsed: ref<boolean>(false),
-        };
-    },
-});
+import { ref } from 'vue';
+import { useStore } from 'vuex';
+
+const store = useStore();
+let selectedKeys = ref<string[]>(['/']);
+let collapsed = ref<boolean>(false);
 </script>
+
 <style lang="less" scoped>
 .layout {
     box-sizing: border-box;

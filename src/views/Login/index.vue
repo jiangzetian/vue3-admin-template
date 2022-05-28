@@ -27,8 +27,7 @@
 <script lang="ts" setup>
 import { reactive, ref, toRaw } from 'vue';
 import { useRouter } from 'vue-router';
-import { useStore } from 'vuex';
-
+import { useUserStore } from '@/store';
 import LoginAPI from '@/request/api/loginAPI';
 
 interface loginFormConfig {
@@ -42,7 +41,8 @@ interface loginResConfig {
 }
 
 const router = useRouter();
-const store = useStore();
+const userStore = useUserStore();
+
 const loginFormRef = ref();
 const loginForm: loginFormConfig = reactive({
     username: '',
@@ -67,11 +67,11 @@ const loginRules = {
 
 const onSubmit = () => {
     loginFormRef.value.validate().then(async () => {
-        let res = (await LoginAPI.setLogin(toRaw(loginForm))) as loginResConfig;
+        const res = (await LoginAPI.setLogin(toRaw(loginForm))) as loginResConfig;
         if (res) {
             console.log(res);
-            store.commit('user/setToken', res.token);
-            store.commit('user/setUserInfo', res.userInfo);
+            userStore.setToken(res.token);
+            userStore.setUserInfo(res.userInfo);
             router.push({ path: '/' });
         }
     });

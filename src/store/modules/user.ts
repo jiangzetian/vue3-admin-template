@@ -1,28 +1,35 @@
-const user = {
-    namespaced: true,
-    state: {
-        token: localStorage.getItem('token') || '',
-        userInfo: JSON.parse(localStorage.getItem('userInfo') || '{}'),
+import { defineStore } from 'pinia';
+
+const useUserStore = defineStore('user', {
+    state: () => {
+        return {
+            token: localStorage.getItem('token') || '',
+            userInfo: JSON.parse(localStorage.getItem('userInfo') || '{}'),
+        };
     },
-    getters: {},
-    mutations: {
-        setToken(state, token) {
-            localStorage.setItem('token', token);
-            state.token = token;
+    actions: {
+        setToken(token: string) {
+            this.token = token;
         },
-        setUserInfo(state, userInfo) {
-            localStorage.setItem('userInfo', JSON.stringify(userInfo));
-            state.userInfo = userInfo;
+        setUserInfo(userInfo) {
+            this.userInfo = userInfo;
         },
-        clearToken(state) {
+        clearToken() {
             localStorage.removeItem('token');
-            state.token = '';
+            this.token = '';
         },
-        clearUser(state) {
+        clearUser() {
             localStorage.removeItem('userInfo');
-            state.userInfo = {};
+            this.userInfo = {};
         },
     },
-    actions: {},
-};
-export default user;
+    persist: {
+        enabled: true,
+        strategies: [
+            { key: 'token', storage: localStorage, paths: ['token'] },
+            { key: 'userInfo', storage: localStorage, paths: ['userInfo'] },
+        ],
+    },
+});
+
+export default useUserStore;

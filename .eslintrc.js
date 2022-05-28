@@ -16,6 +16,7 @@ module.exports = {
     },
     plugins: ['vue', '@typescript-eslint'],
     rules: {
+        'vue/no-v-model-argument': 'off',
         'no-console': 'off',
         'import/no-unresolved': [
             2,

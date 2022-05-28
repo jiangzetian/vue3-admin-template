@@ -16,7 +16,7 @@
             </a-layout-header>
 
             <a-layout-content style="margin: 24px 16px; padding: 24px; background: #fff; min-height: 280px">
-                <a-spin :spinning="store.state.loading.loadingState" :delay="300" size="large">
+                <a-spin :spinning="loadingStore.loadingState" :delay="300" size="large">
                     <router-view />
                 </a-spin>
             </a-layout-content>
@@ -27,11 +27,11 @@
 <script lang="ts" setup>
 import { DashboardOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue';
 import { ref } from 'vue';
-import { useStore } from 'vuex';
+import { useLoadingStore } from '@/store';
 
-const store = useStore();
-let selectedKeys = ref<string[]>(['/']);
-let collapsed = ref<boolean>(false);
+const loadingStore = useLoadingStore();
+const selectedKeys = ref<string[]>(['/']);
+const collapsed = ref<boolean>(false);
 </script>
 
 <style lang="less" scoped>

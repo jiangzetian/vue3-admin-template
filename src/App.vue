@@ -1,17 +1,17 @@
 <template>
     <layout v-if="route.meta.layout" />
-    <a-spin :spinning="store.state.loading.loadingState" :delay="300" size="large" v-else>
+    <a-spin :spinning="loadingStore.loadingState" :delay="300" size="large" v-else>
         <router-view />
     </a-spin>
 </template>
 
 <script lang="ts" setup>
-import layout from '@/layout/index.vue';
 import { useRoute } from 'vue-router';
-import { useStore } from 'vuex';
+import { useLoadingStore } from '@/store';
+import layout from '@/layout/index.vue';
 
 const route = useRoute();
-const store = useStore();
+const loadingStore = useLoadingStore();
 </script>
 
 <style lang="less">

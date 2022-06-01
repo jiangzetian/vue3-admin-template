@@ -21,6 +21,7 @@ export default [
                         email: Mock.Random.email(),
                         gender: Mock.Random.natural(1, 2),
                         age: Mock.Random.natural(18, 30),
+                        avatar: Mock.Random.image('800x800'),
                     },
                 },
             };

@@ -15,11 +15,9 @@ const useUserStore = defineStore('user', {
             this.userInfo = userInfo;
         },
         clearToken() {
-            localStorage.removeItem('token');
             this.token = '';
         },
         clearUser() {
-            localStorage.removeItem('userInfo');
             this.userInfo = {};
         },
     },

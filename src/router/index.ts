@@ -33,6 +33,10 @@ router.beforeEach((to, from, next) => {
     if (to.name !== 'Login' && !userStore.token) {
         next({ name: 'Login' });
     } else {
+        if (to.name === 'Login') {
+            userStore.clearToken();
+            userStore.clearUser();
+        }
         next();
     }
 });

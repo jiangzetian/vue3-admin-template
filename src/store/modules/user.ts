@@ -5,6 +5,7 @@ const useUserStore = defineStore('user', {
         return {
             token: '',
             userInfo: {},
+            routes: [],
         };
     },
     actions: {
@@ -14,11 +15,17 @@ const useUserStore = defineStore('user', {
         setUserInfo(userInfo) {
             this.userInfo = userInfo;
         },
+        setRoutes(routes) {
+            this.routes = routes;
+        },
         clearToken() {
             this.token = '';
         },
         clearUser() {
             this.userInfo = {};
+        },
+        clearRoutes() {
+            this.routes = [];
         },
     },
     persist: {
@@ -26,6 +33,7 @@ const useUserStore = defineStore('user', {
         strategies: [
             { key: 'token', storage: localStorage, paths: ['token'] },
             { key: 'userInfo', storage: localStorage, paths: ['userInfo'] },
+            { key: 'routes', storage: localStorage, paths: ['routes'] },
         ],
     },
 });

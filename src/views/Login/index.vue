@@ -9,10 +9,10 @@
                 <div class="login_form">
                     <a-form class="form" ref="loginFormRef" layout="vertical" :rules="loginRules" :model="loginForm">
                         <a-form-item label="账号:" name="username">
-                            <a-input v-model:value="loginForm.username" size="large" />
+                            <a-input v-model:value="loginForm.username" size="large" autocomplete="off" />
                         </a-form-item>
                         <a-form-item label="密码:" name="password">
-                            <a-input-password v-model:value="loginForm.password" size="large" />
+                            <a-input-password v-model:value="loginForm.password" size="large" autocomplete="off" />
                         </a-form-item>
                         <a-form-item>
                             <a-button type="primary" size="large" block @click="onSubmit">提交</a-button>
@@ -29,6 +29,7 @@ import { reactive, ref, toRaw } from 'vue';
 import { useRouter } from 'vue-router';
 import { useUserStore } from '@/store';
 import LoginAPI from '@/request/api/loginAPI';
+import { addRoutes } from '@/util/anyncRoutes';
 
 interface loginFormConfig {
     username: string;
@@ -38,6 +39,7 @@ interface loginFormConfig {
 interface loginResConfig {
     token: string;
     userInfo: any;
+    routes: [];
 }
 
 const router = useRouter();
@@ -72,6 +74,8 @@ const onSubmit = () => {
             console.log(res);
             userStore.setToken(res.token);
             userStore.setUserInfo(res.userInfo);
+            userStore.setRoutes(res.routes);
+            addRoutes(userStore, router);
             router.push({ path: '/' });
         }
     });

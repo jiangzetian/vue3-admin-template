@@ -9,7 +9,7 @@
 -   axios 请求
 -   less css 预编译
 -   vue-router 路由
--   vuex 状态管理
+-   ~~vuex 状态管理~~  pinia 状态管理
 -   eslint 代码规范
 -   prettier 代码格式化
 -   mockjs 模拟接口

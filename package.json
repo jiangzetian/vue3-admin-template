@@ -8,15 +8,14 @@
     },
     "dependencies": {
         "@ant-design/icons-vue": "^6.1.0",
-        "ant-design-vue": "^3.2.3",
+        "ant-design-vue": "^3.2.7",
         "axios": "^0.21.1",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",
         "pinia": "^2.0.14",
         "pinia-plugin-persist": "^1.0.0",
         "vue": "^3.2.36",
-        "vue-router": "^4.0.11",
-        "vuex": "^4.0.2"
+        "vue-router": "^4.0.11"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^4.29.2",

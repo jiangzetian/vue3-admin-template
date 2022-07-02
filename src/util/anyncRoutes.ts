@@ -29,6 +29,7 @@ const addRoutes = (userStore, router) => {
         meta: {
             title: '无法找到该页面',
             layout: false,
+            menu: false,
         },
     });
 };

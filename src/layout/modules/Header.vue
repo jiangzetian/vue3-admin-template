@@ -74,6 +74,7 @@ const outLogin = () => {
         }
         .name {
             font-size: 14px;
+            min-width: 40px;
         }
     }
 }

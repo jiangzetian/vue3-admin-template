@@ -1,5 +1,3 @@
 <template>
-    <h1>Menu2页面！</h1>
+    <router-view />
 </template>
-
-<script lang="ts" setup></script>

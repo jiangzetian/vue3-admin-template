@@ -6,6 +6,8 @@ interface routeConfig {
     meta: {
         title: string;
         layout: boolean;
+        menu: boolean;
+        icon: string;
     };
     children?: routeConfig[];
 }
@@ -18,6 +20,8 @@ const rootRoutes: routeConfig[] = [
         meta: {
             title: 'Root权限页',
             layout: true,
+            menu: true,
+            icon: 'KeyOutlined',
         },
     },
     {
@@ -28,6 +32,8 @@ const rootRoutes: routeConfig[] = [
         meta: {
             title: '多级菜单页',
             layout: true,
+            menu: true,
+            icon: 'MenuOutlined',
         },
         children: [
             {
@@ -37,16 +43,34 @@ const rootRoutes: routeConfig[] = [
                 meta: {
                     title: 'Menu1页',
                     layout: true,
+                    menu: true,
+                    icon: 'MenuOutlined',
                 },
             },
             {
                 path: 'menu2',
                 name: 'menu2',
                 component: 'views/Menu/Menu2/index.vue',
+                redirect: 'menu2/menu2-1',
                 meta: {
                     title: 'Menu2页',
                     layout: true,
+                    menu: true,
+                    icon: 'MenuOutlined',
                 },
+                children: [
+                    {
+                        path: 'menu2-1',
+                        name: 'menu2-1',
+                        component: 'views/Menu/Menu2/Menu2-1/index.vue',
+                        meta: {
+                            title: 'Menu2-1页',
+                            layout: true,
+                            menu: true,
+                            icon: 'MenuOutlined',
+                        },
+                    },
+                ],
             },
         ],
     },
@@ -60,6 +84,8 @@ const adminRoutes: routeConfig[] = [
         meta: {
             title: 'Admin权限页',
             layout: true,
+            menu: true,
+            icon: 'KeyOutlined',
         },
     },
 ];

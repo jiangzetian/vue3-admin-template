@@ -2,12 +2,7 @@
     <a-layout class="layout">
         <a-layout-sider v-model:collapsed="layoutStore.menuCollapsed" :trigger="null" collapsible>
             <div class="logo" />
-            <a-menu theme="dark" mode="inline" v-model:selectedKeys="selectedKeys">
-                <a-menu-item key="/">
-                    <dashboard-outlined />
-                    <span>首页</span>
-                </a-menu-item>
-            </a-menu>
+            <Menu />
         </a-layout-sider>
         <a-layout>
             <Header />
@@ -21,14 +16,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { DashboardOutlined } from '@ant-design/icons-vue';
 import { useLoadingStore, useLayoutStore } from '@/store';
+import Menu from './modules/Menu.vue';
 import Header from './modules/Header.vue';
 
 const loadingStore = useLoadingStore();
 const layoutStore = useLayoutStore();
-const selectedKeys = ref<string[]>(['/']);
 </script>
 
 <style lang="less" scoped>

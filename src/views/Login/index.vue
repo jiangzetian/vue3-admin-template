@@ -89,6 +89,7 @@ const onSubmit = () => {
     background: #f5f5fa;
 
     .login_card {
+        overflow: hidden;
         width: 100%;
         height: 100%;
         max-width: 1000px;

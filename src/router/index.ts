@@ -1,4 +1,3 @@
-// @/router/index.ts
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { useUserStore } from '@/store';
 import { addRoutes, clerRoutes } from '@/util/anyncRoutes';
@@ -11,6 +10,8 @@ const routes = [
         meta: {
             title: '首页',
             layout: true,
+            menu: true,
+            icon: 'DashboardOutlined',
         },
     },
     {
@@ -20,6 +21,8 @@ const routes = [
         meta: {
             title: '登录',
             layout: false,
+            menu: false,
+            icon: 'LoginOutlined',
         },
     },
 ];
@@ -32,7 +35,9 @@ const router = createRouter({
 let registerRouteFresh = true;
 router.beforeEach((to, from, next) => {
     const userStore = useUserStore();
-
+    if (to.meta.title) {
+        document.title = to.meta.title as string;
+    }
     if (to.name !== 'Login' && !userStore.token) {
         next({ name: 'Login' });
     } else {

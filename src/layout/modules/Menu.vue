@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useRouter, useRoute, RouteRecordName } from 'vue-router';
 import { useUserStore } from '@/store';
 import Icon from '@/util/icon';
@@ -29,7 +29,7 @@ const userStore = useUserStore();
 const route = useRoute();
 const router = useRouter();
 
-const routeKey = ref<(RouteRecordName | null | undefined)[]>(['/']);
+const routeKey = ref<(RouteRecordName | null | undefined)[]>([]);
 const routesDefaultData = ref<any[]>([
     {
         path: '/',
@@ -57,6 +57,15 @@ const menuSelect = (item) => {
 onMounted(() => {
     getMenu();
 });
+
+watch(
+    () => route.name,
+    (val) => {
+        if (val) {
+            routeKey.value = [route.name];
+        }
+    }
+);
 </script>
 
 <style lang="less" scoped></style>

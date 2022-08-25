@@ -12,6 +12,7 @@ const routes = [
             layout: true,
             menu: true,
             icon: 'DashboardOutlined',
+            sort: 1,
         },
     },
     {

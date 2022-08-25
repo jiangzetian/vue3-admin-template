@@ -8,6 +8,7 @@ interface routeConfig {
         layout: boolean;
         menu: boolean;
         icon: string;
+        sort?: number;
     };
     children?: routeConfig[];
 }
@@ -22,6 +23,7 @@ const rootRoutes: routeConfig[] = [
             layout: true,
             menu: true,
             icon: 'KeyOutlined',
+            sort: 2,
         },
     },
     {
@@ -34,6 +36,7 @@ const rootRoutes: routeConfig[] = [
             layout: true,
             menu: true,
             icon: 'MenuOutlined',
+            sort: 3,
         },
         children: [
             {
@@ -45,6 +48,7 @@ const rootRoutes: routeConfig[] = [
                     layout: true,
                     menu: true,
                     icon: 'MenuOutlined',
+                    sort: 1,
                 },
             },
             {
@@ -57,6 +61,7 @@ const rootRoutes: routeConfig[] = [
                     layout: true,
                     menu: true,
                     icon: 'MenuOutlined',
+                    sort: 2,
                 },
                 children: [
                     {
@@ -68,6 +73,7 @@ const rootRoutes: routeConfig[] = [
                             layout: true,
                             menu: true,
                             icon: 'MenuOutlined',
+                            sort: 3,
                         },
                     },
                 ],
@@ -86,6 +92,7 @@ const adminRoutes: routeConfig[] = [
             layout: true,
             menu: true,
             icon: 'KeyOutlined',
+            sort: 2,
         },
     },
 ];

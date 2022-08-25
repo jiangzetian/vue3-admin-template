@@ -5,16 +5,16 @@
         </template>
         <template #title>{{ routesSubData.meta.title }}</template>
         <template v-for="item in routesSubData.children">
-            <template v-if="!item.children">
+            <template v-if="item.children && item.children.length > 0">
+                <sub-menu :routes-sub-data="item" :key="item.name" />
+            </template>
+            <template v-else>
                 <a-menu-item :key="item.name">
                     <template #icon v-if="item.meta.icon">
                         <Icon :icon="item.meta.icon" />
                     </template>
                     <span>{{ item.meta.title }}</span>
                 </a-menu-item>
-            </template>
-            <template v-else>
-                <sub-menu :routes-sub-data="item" :key="item.name" />
             </template>
         </template>
     </a-sub-menu>

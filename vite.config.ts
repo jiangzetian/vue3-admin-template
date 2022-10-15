@@ -4,7 +4,6 @@ import { defineConfig } from 'vite';
 import { viteMockServe } from 'vite-plugin-mock';
 
 export default defineConfig({
-    // base: process.env.NODE_ENV === 'production' ? '/vue3-admin-template/' : './',
     base: '/vue3-admin-template/',
     plugins: [
         vue(),

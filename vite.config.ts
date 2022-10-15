@@ -8,6 +8,8 @@ export default defineConfig({
         vue(),
         viteMockServe({
             supportTs: true,
+            prodEnabled: true,
+            injectFile: path.resolve('src/main.ts'),
         }),
     ],
     resolve: {

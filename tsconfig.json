@@ -14,9 +14,7 @@
         "paths": {
             "@/*": ["src/*"]
         },
-        "types": [
-            "pinia-plugin-persist"
-        ]
+        "types": ["pinia-plugin-persist", "node"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

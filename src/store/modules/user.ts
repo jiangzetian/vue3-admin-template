@@ -4,7 +4,7 @@ const useUserStore = defineStore('user', {
     state: () => {
         return {
             token: '',
-            userInfo: {},
+            userInfo: <{ avatar?: string; name?: string }>{},
             routes: [],
         };
     },

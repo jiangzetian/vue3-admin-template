@@ -14,6 +14,15 @@
 -   prettier 代码格式化
 -   mockjs 模拟接口
 
+## 线上地址
+
+-   [点击预览](https://jiangzetian.github.io/vue3-admin-template)
+-   root 权限账号：root
+-   root 权限密码：root
+-   admin 权限账号：admin
+-   admin 权限密码：admin
+-   普通权限任意账号密码可登录
+
 ## 项目视频
 
 1. [一、Vue3+Ts+Vite+AntdUI 构建后台基础模板——构建初始项目](https://www.bilibili.com/video/BV17v411T7ev/)

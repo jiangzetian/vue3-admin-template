@@ -1,27 +1,44 @@
-# Vue 3 + Typescript + Vite
+# Vue3+Ts+Vite+AntdUI 构建后台基础模板
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+-   项目名称：Vue3-Admin-Template
+-   Vue3+Ts+Vite
 
-## Recommended IDE Setup
+## 第三方库：
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+-   ant-design-vue UI
+-   axios 请求
+-   less css 预编译
+-   vue-router 路由
+-   ~~vuex 状态管理~~ pinia 状态管理
+-   eslint 代码规范
+-   prettier 代码格式化
+-   mockjs 模拟接口
 
-### If Using `<script setup>`
+## 线上地址
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+-   [点击预览](https://jiangzetian.github.io/vue3-admin-template)
+-   root 权限账号：root
+-   root 权限密码：root
+-   admin 权限账号：admin
+-   admin 权限密码：admin
+-   普通权限任意账号密码可登录
 
-## Type Support For `.vue` Imports in TS
+## 项目视频
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+1. [一、Vue3+Ts+Vite+AntdUI 构建后台基础模板——构建初始项目](https://www.bilibili.com/video/BV17v411T7ev/)
+2. [二、Vue3+Ts+Vite+AntdUI 构建后台基础模板——登录页开发](https://www.bilibili.com/video/BV1zg411579u/)
+3. [三、Vue3+Ts+Vite+AntdUI 构建后台基础模板——项目配置及代码规范](https://www.bilibili.com/video/BV1Av411A75B/)
+4. [四、Vue3+Ts+Vite+AntdUI 构建后台基础模板——Layout 布局及请求封装](https://www.bilibili.com/video/BV1JR4y1E7bh/)
+5. [五、Vue3+Ts+Vite+AntdUI 构建后台基础模板——VUEX 与加载中](https://www.bilibili.com/video/BV1gS4y1X7eK/)
+6. [六、Vue3+Ts+Vite+AntdUI 构建后台基础模板——登录状态拦截](https://www.bilibili.com/video/BV1mY4y147Xx/)
+7. [七、Vue3+Ts+Vite+AntdUI 构建后台基础模板——结构性调整](https://www.bilibili.com/video/BV1S5411D7WF/)
+8. [八、Vue3+Ts+Vite+AntdUI 构建后台基础模板——退出登录功能](https://www.bilibili.com/video/BV1yW4y1C7gV/)
+9. [九、Vue3+Ts+Vite+AntdUI 构建后台基础模板——动态添加路由](https://www.bilibili.com/video/BV1JY4y1n7X9/)
+10. [十、Vue3+Ts+Vite+AntdUI 构建后台基础模板——动态生成菜单栏](https://www.bilibili.com/video/BV1vd4y1X79w/)
+11. [十一、Vue3+Ts+Vite+AntdUI构建后台基础模板——项目构建（完结）](https://www.bilibili.com/video/BV1gD4y1Y7J6/)
 
-### If Using Volar
+## 文字笔记
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
-
-### If Using Vetur
-
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+1. 本项目文字笔记
+2. 更多的前端内容
+3. 欢迎关注公众号：天小天个人网

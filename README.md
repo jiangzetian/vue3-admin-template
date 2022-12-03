@@ -35,6 +35,7 @@
 8. [八、Vue3+Ts+Vite+AntdUI 构建后台基础模板——退出登录功能](https://www.bilibili.com/video/BV1yW4y1C7gV/)
 9. [九、Vue3+Ts+Vite+AntdUI 构建后台基础模板——动态添加路由](https://www.bilibili.com/video/BV1JY4y1n7X9/)
 10. [十、Vue3+Ts+Vite+AntdUI 构建后台基础模板——动态生成菜单栏](https://www.bilibili.com/video/BV1vd4y1X79w/)
+11. [十一、Vue3+Ts+Vite+AntdUI构建后台基础模板——项目构建（完结）](https://www.bilibili.com/video/BV1gD4y1Y7J6/)
 
 ## 文字笔记
 
